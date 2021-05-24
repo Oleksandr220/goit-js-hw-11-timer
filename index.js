@@ -1,9 +1,10 @@
 class CountdownTimer {
 
-  constructor({selector, targetDate} = {}) {
+  constructor({selector, targetDate} ) {
       this.timeId = null;
       this.selector = selector;
       this.targetDate = targetDate;
+      this.startCounting();
   }
 
   createTime() {
@@ -65,6 +66,3 @@ const forTimer = new CountdownTimer({
   selector: '#timer-1',
   targetDate: new Date('June 1, 2021'), 
 });
-
-
-forTimer.startCounting();
