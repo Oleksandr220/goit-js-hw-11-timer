@@ -33,10 +33,21 @@ class CountdownTimer {
   }
 
   clockFace({days, hours, mins, secs}) {
-    document.querySelector('[data-value="days"]').textContent = `${days}`;
-    document.querySelector('[data-value="hours"]').textContent = `${hours}`;
-    document.querySelector('[data-value="mins"]').textContent = `${mins}`;
-    document.querySelector('[data-value="secs"]').textContent = `${secs}`;
+    document.querySelector(
+      this.selector,
+    ).children[0].children[0].textContent = `${days}`;
+
+    document.querySelector(
+      this.selector,
+    ).children[1].children[0].textContent = `${hours}`;
+
+    document.querySelector(
+      this.selector,
+    ).children[2].children[0].textContent = `${mins}`;
+
+    document.querySelector(
+      this.selector,
+    ).children[3].children[0].textContent = `${secs}`;
   }
 
   receiveTime(time) {   
